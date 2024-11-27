@@ -3,6 +3,7 @@ name: Test Pre-Release action
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 jobs:
   test:
