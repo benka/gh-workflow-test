@@ -1,0 +1,13 @@
+name: Test Release action
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  test:
+    if: ${{ !github.event.release.prerelease }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Runs on Release
+      run: echo "This is a Release"
